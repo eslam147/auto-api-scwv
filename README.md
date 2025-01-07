@@ -5,7 +5,7 @@ If no version is specified, it defaults to `http://your-domain.com/api`.
 
 ## **Documention**
 
-# Laravel Auto API Single Controller 
+# Laravel Auto API Single Controller Web View
 
 ## **Overview**
 
