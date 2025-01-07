@@ -87,13 +87,13 @@ class ExampleController extends Controller
 </code>
 </pre>
 
-<pre>
     In blade File
-   <a href="{{ routeApi('about') }}">About</a>
-   <a href="{{ routeApi('product', ['id' => $id]) }}">product</a>
+<pre>
+   href="{{ routeApi('about') }}
+   href="{{ routeApi('product', ['id' => $id]) }}
 </pre>
 <pre>
-   <form action="{{ routeApi('login') }}" method="post">
+   action="{{ routeApi('login') }}"
 </pre>
 ---
 
