@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "Laravel\\AutoApiScwv\\": "src/"
-        }
+        },
+        "files": [
+            "src/Helpers/helper.php"
+        ]
     },
     "extra": {
         "laravel": {
