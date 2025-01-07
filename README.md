@@ -89,13 +89,17 @@ class ExampleController extends Controller
 
     In blade File
 <pre>
+<code class="blade">
    href="{{ routeApi('about') }}
    href="{{ routeApi('product', ['id' => $id]) }}
+</code>
 </pre>
 <pre>
-   action="{{ routeApi('login') }}"
+    <code class="blade">
+       action="{{ routeApi('login') }}"
+    </code>
 </pre>
----
+
 
 ### **Custom Artisan Command Example**
 
