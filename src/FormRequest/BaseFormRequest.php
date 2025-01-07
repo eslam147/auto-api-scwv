@@ -1,6 +1,6 @@
 <?php
 
-namespace laravel\AutoApiScwv\FormRequest;
+namespace AutoApi\AutoApiScwv\FormRequest;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;

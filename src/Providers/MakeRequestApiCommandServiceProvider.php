@@ -1,6 +1,6 @@
 <?php
 
-namespace laravel\AutoApiScwv\Providers;
+namespace AutoApi\AutoApiScwv\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\File;

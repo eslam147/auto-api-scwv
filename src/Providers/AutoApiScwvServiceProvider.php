@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\AutoApiScwv\Providers;
+namespace AutoApi\AutoApiScwv\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\File;
@@ -26,7 +26,7 @@ class AutoApiScwvServiceProvider extends ServiceProvider
         ], 'config');
         // نشر الأوامر عند تثبيت الحزمة
         $this->commands([
-            \Laravel\AutoApiScwv\Console\Commands\MakeRequestApiCommand::class,
+            \AutoApi\AutoApiScwv\Console\Commands\MakeRequestApiCommand::class,
         ]);
     }
     protected function addAuthSettings()
@@ -101,11 +101,11 @@ class AutoApiScwvServiceProvider extends ServiceProvider
             $configContent = File::get($configFile);
 
             // التحقق من أن DynamicRouteAPIServiceProvider غير موجود
-            if (strpos($configContent, '\laravel\AutoApiScwv\Providers\DynamicRouteAPIServiceProvider::class') === false) {
+            if (strpos($configContent, '\AutoApi\AutoApiScwv\Providers\DynamicRouteAPIServiceProvider::class') === false) {
                 // البحث عن قائمة الـ 'providers' وإضافة السطر داخلها
                 $newContent = preg_replace(
                     '/(\'providers\'\s*=>\s*\[)/',
-                    "$1\n        \\laravel\\AutoApiScwv\\Providers\\DynamicRouteAPIServiceProvider::class,",
+                    "$1\n        \\AutoApi\\AutoApiScwv\\Providers\\DynamicRouteAPIServiceProvider::class,",
                     $configContent
                 );
 

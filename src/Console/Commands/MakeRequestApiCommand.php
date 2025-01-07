@@ -1,6 +1,6 @@
 <?php
 
-namespace laravel\AutoApiScwv\Console\Commands;
+namespace AutoApi\AutoApiScwv\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;

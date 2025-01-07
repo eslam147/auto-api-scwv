@@ -1,6 +1,6 @@
 <?php
 
-namespace laravel\AutoApiScwv\Providers;
+namespace AutoApi\AutoApiScwv\Providers;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;

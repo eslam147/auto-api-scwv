@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\AutoApiScwv\Helpers;
+namespace AutoApi\AutoApiScwv\Helpers;
 
 class RouteServiceProviderModifier
 {

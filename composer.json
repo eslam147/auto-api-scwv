@@ -1,5 +1,5 @@
 {
-    "name": "laravel/auto-api-scwv",
+    "name": "auto-api/auto-api-scwv",
     "description": "Laravel Auto API Single Controller Web View This package that you activate first to learn the secrets of the API, you can write one path and one controller then return the view to the web and from the same controller to restore and re-register the json. This package will write one source code for the web and the API at the same time, you do not need to write one source code for the web and another for the API This package saves you from writing the source code because you will write one source code that works on the web and works on applications, all of this with one source code only",
     "type": "package",
     "license": "MIT",
@@ -11,27 +11,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Laravel\\AutoApiScwv\\Providers\\AutoApiScwvServiceProvider"
+                "AutoApi\\AutoApiScwv\\Providers\\AutoApiScwvServiceProvider"
             ]
         }
     },
-    "scripts": {
-        "post-package-install": [
-            "php artisan vendor:publish --provider=\"Laravel\\AutoApiScwv\\Providers\\FormRequestServiceProvider\" --tag=\"form-requests\"",
-            "php artisan route:cache",
-            "php -r \"if (strpos(file_get_contents('.env'), '#### Settings for API ####') === false) { file_put_contents('.env', PHP_EOL . '#### Settings for API ####' . PHP_EOL . 'CLEAR_CACHE_ON_BOOT=true' . PHP_EOL . 'API_VERSION=' . PHP_EOL . 'AUTH_API=auth:sanctum' . PHP_EOL . 'API_NAME=' . PHP_EOL, FILE_APPEND); }\"",
-            "php -r \"\\$configFile = base_path('config/auth.php'); if (file_exists(\\$configFile)) { \\$configContent = file_get_contents(\\$configFile); if (strpos(\\$configContent, 'api') === false) { \\$configContent = str_replace('guards' => [', 'guards' => [PHP_EOL . '        \\'api\\' => [' . PHP_EOL . '            \\'driver\\' => \\'sanctum\\',' . PHP_EOL . '            \\'provider\\' => \\'users\\',' . PHP_EOL . '        ],', \\$configContent); file_put_contents(\\$configFile, \\$configContent); } }\"",
-            "php -r \"\\$configFile = base_path('config/auth.php'); if (file_exists(\\$configFile)) { \\$configContent = file_get_contents(\\$configFile); if (strpos(\\$configContent, 'gitignore') === false) { \\$configContent = str_replace('return [', 'return [' . PHP_EOL . '    \\'gitignore\\' => [' . PHP_EOL . '        \\'api\\',' . PHP_EOL . '        \\'sanctum\\',' . PHP_EOL . '    ],', \\$configContent); file_put_contents(\\$configFile, \\$configContent); } }\""
 
-        ],
-        "post-update-cmd": [
-            "php artisan vendor:publish --provider=\"Laravel\\AutoApiScwv\\Providers\\FormRequestServiceProvider\" --tag=\"form-requests\"",
-            "php artisan route:cache",
-            "php -r \"if (strpos(file_get_contents('.env'), '#### Settings for API ####') === false) { file_put_contents('.env', PHP_EOL . '#### Settings for API ####' . PHP_EOL . 'CLEAR_CACHE_ON_BOOT=true' . PHP_EOL . 'API_VERSION=' . PHP_EOL . 'AUTH_API=auth:sanctum' . PHP_EOL . 'API_NAME=' . PHP_EOL, FILE_APPEND); }\"",
-            "php -r \"\\$configFile = base_path('config/auth.php'); if (file_exists(\\$configFile)) { \\$configContent = file_get_contents(\\$configFile); if (strpos(\\$configContent, 'api') === false) { \\$configContent = str_replace('guards' => [', 'guards' => [PHP_EOL . '        \\'api\\' => [' . PHP_EOL . '            \\'driver\\' => \\'sanctum\\',' . PHP_EOL . '            \\'provider\\' => \\'users\\',' . PHP_EOL . '        ],', \\$configContent); file_put_contents(\\$configFile, \\$configContent); } }\"",
-            "php -r \"\\$configFile = base_path('config/auth.php'); if (file_exists(\\$configFile)) { \\$configContent = file_get_contents(\\$configFile); if (strpos(\\$configContent, 'gitignore') === false) { \\$configContent = str_replace('return [', 'return [' . PHP_EOL . '    \\'gitignore\\' => [' . PHP_EOL . '        \\'api\\',' . PHP_EOL . '        \\'sanctum\\',' . PHP_EOL . '    ],', \\$configContent); file_put_contents(\\$configFile, \\$configContent); } }\""
-        ]
-    },
     "authors": [
         {
             "name": "eslam mohamed"
