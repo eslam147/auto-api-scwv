@@ -87,13 +87,15 @@ class ExampleController extends Controller
 </code>
 </pre>
 
-    In blade File
+### **In blade File**
+
 <pre>
-<code class="blade">
-   href="{{ routeApi('about') }}
-   href="{{ routeApi('product', ['id' => $id]) }}
-</code>
+    <code class="blade">
+    href="{{ routeApi('about') }}
+    href="{{ routeApi('product', ['id' => $id]) }}
+    </code>
 </pre>
+
 <pre>
     <code class="blade">
        action="{{ routeApi('login') }}"
@@ -106,7 +108,7 @@ class ExampleController extends Controller
 Create a new API request class with the command:
 
 <pre>
-<code class="bash">php artisan make:requestapi CreateUserRequest</code>
+    <code class="bash">php artisan make:requestapi CreateUserRequest</code>
 </pre>
 
 This generates the file in the `app/Http/Requests` directory, optimized for API validation.
