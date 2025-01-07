@@ -15,7 +15,7 @@ This package when that you installed that it can write one path and one controll
 
 <pre>
     <code class="bash">
-        composer require laravel/auto-api-scwv
+        composer require auto-api/auto-api-scwv
     </code>
 </pre>
 

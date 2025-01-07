@@ -176,7 +176,7 @@ class AutoApiScwvServiceProvider extends ServiceProvider
         $envFile = base_path('.env');
 
         if (file_exists($envFile) && strpos(file_get_contents($envFile), '#### Settings for API ####') === false) {
-            file_put_contents($envFile, PHP_EOL . '#### Settings for API ####' . PHP_EOL . 'CLEAR_CACHE_ON_BOOT=true' . PHP_EOL . 'API_VERSION=' . PHP_EOL . 'AUTH_API=auth:sanctum' . PHP_EOL . 'API_NAME=' . PHP_EOL, FILE_APPEND);
+            file_put_contents($envFile, PHP_EOL . '#### Settings for API ####' . PHP_EOL . 'CLEAR_CACHE_ON_BOOT=true' . PHP_EOL . 'API_VERSION=' . PHP_EOL . 'AUTH_API=auth:sanctum' . PHP_EOL . 'API_NAME=api' . PHP_EOL, FILE_APPEND);
         }
     }
 
